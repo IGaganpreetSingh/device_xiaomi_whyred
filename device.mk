@@ -134,6 +134,10 @@ PRODUCT_PACKAGES += \
     libbthost_if \
     libldacBT_bco
 
+# Gcam
+PRODUCT_PACKAGES += \
+    GoogleCameraGo
+
 # Camera
 PRODUCT_PACKAGES += \
     Snap
