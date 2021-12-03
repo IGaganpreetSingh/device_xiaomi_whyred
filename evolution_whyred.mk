@@ -12,7 +12,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
 # Inherit Evolution-X common makefile
-$(call inherit-product, vendor/evolution/config/common.mk)
+$(call inherit-product, vendor/evolution/config/common_full_phone.mk)
 
 EVOLUTION_GAPPS := true
 
