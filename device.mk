@@ -138,10 +138,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     GoogleCameraGo
 
-# Camera
-PRODUCT_PACKAGES += \
-    Snap
-
 PRODUCT_PACKAGES += \
     android.frameworks.sensorservice@1.0.vendor \
     android.hardware.camera.device@3.5:64 \
@@ -377,14 +373,37 @@ PRODUCT_PACKAGES += \
 
 # RIL
 PRODUCT_PACKAGES += \
-    android.hardware.radio@1.5.vendor \
-    android.hardware.radio.config@1.2.vendor \
     android.hardware.radio.deprecated@1.0.vendor \
-    android.hardware.secure_element@1.2.vendor \
     libavservices_minijail.vendor \
-    libjson \
-    libprotobuf-cpp-full \
-    librmnetctl
+    libjson \android.hardware.secure_element@1.0 \
+    android.hardware.secure_element@1.2 \
+    android.hardware.secure_element@1.2.vendor \
+    android.system.net.netd@1.1.vendor \
+    android.hardware.radio@1.5.vendor \
+    android.hardware.radio@1.4.vendor \
+    android.hardware.radio.config@1.2 \
+    android.hardware.radio.config@1.2.vendor \
+    android.hardware.secure_element@1.2.vendor \
+    android.hardware.secure_element@1.1.vendor \
+    android.hardware.secure_element@1.0.vendor \
+    librmnetctl \
+    libprotobuf-cpp-full
+
+PRODUCT_PACKAGES += \
+    ims-ext-common \
+    ims_ext_common.xml \
+    qti-telephony-hidl-wrapper \
+    qti_telephony_hidl_wrapper.xml \
+    qti-telephony-utils \
+    qti_telephony_utils.xml \
+    rild \
+    telephony-ext
+
+# Neural Networks
+PRODUCT_PACKAGES += \
+    android.hardware.neuralnetworks@1.2 \
+    android.hardware.neuralnetworks@1.2.vendor
+   
 
 # Seccomp policy
 PRODUCT_COPY_FILES += \
@@ -413,17 +432,6 @@ WITH_DEXPREOPT_DEBUG_INFO := false
 # Tethering
 PRODUCT_PACKAGES += \
     TetheringConfigOverlay
-
-# Telephony
-PRODUCT_PACKAGES += \
-    qti_telephony_hidl_wrapper.xml \
-    qti_telephony_utils.xml \
-    qti-telephony-hidl-wrapper \
-    qti-telephony-utils \
-    telephony-ext
-
-PRODUCT_BOOT_JARS += \
-    telephony-ext
 
 # Thermal
 PRODUCT_PACKAGES += \
